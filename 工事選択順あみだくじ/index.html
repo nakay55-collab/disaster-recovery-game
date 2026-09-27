@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffcc45">
+  <title>工事選択順 あみだくじ | 災害復旧・まちづくりゲーム</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="brand">
+    <span class="brand-left"><span class="brand-mark" aria-hidden="true">＋</span> 災害復旧・まちづくりゲーム</span>
+    <button id="reset" class="text-button" type="button">リセット</button>
+  </header>
+  <p id="storage-warning" class="notice" role="alert" hidden>このブラウザでは保存できません。操作中はページを閉じたり再読み込みしたりしないでください。</p>
+  <main id="app"></main>
+  <footer>公平に、わくわくしながら順番を決めよう。</footer>
+  <dialog id="reset-dialog" aria-labelledby="reset-title">
+    <h2 id="reset-title">本当にリセットしますか？</h2>
+    <p>チーム名・順位・入口選択・あみだくじの結果がすべて削除されます。</p>
+    <div class="dialog-actions"><button id="cancel-reset" class="secondary" type="button">キャンセル</button><button id="confirm-reset" class="primary" type="button">リセットする</button></div>
+  </dialog>
+  <noscript>このツールにはJavaScriptが必要です。ブラウザの設定でJavaScriptを有効にしてください。</noscript>
+</body>
+</html>

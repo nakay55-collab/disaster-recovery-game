@@ -1,0 +1,10 @@
+# macOSが自動生成するファイル
+.DS_Store
+
+# 印刷用カードシートの生成物（build_sheets.pyでいつでも再生成できるため含めません）
+印刷用カードシート/print-sheets/
+
+# 開発時に参考として保存した用紙パッケージの写真（ツール本体には不要）
+印刷用カードシート/originals/layout-reference.png
+印刷用カードシート/originals/layout-reference-preview.png
+印刷用カードシート/originals/IMG_2554.JPEG

@@ -1,0 +1,99 @@
+:root { color-scheme: light; --ink:#292c30; --muted:#686b70; --yellow:#ffcc45; --orange:#b64812; --line:#dedfdc; --paper:#fff; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); background:#f5f5f0; font-family: -apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif; font-size:17px; line-height:1.75; }
+button { font:inherit; cursor:pointer; touch-action:manipulation; }
+button:focus-visible, summary:focus-visible { outline:3px solid #1968ac; outline-offset:4px; }
+button:disabled { opacity:.4; cursor:default; }
+[hidden] { display:none !important; }
+input { font:inherit; }
+.brand { max-width:1100px; margin:auto; padding:20px 22px; display:flex; align-items:center; justify-content:space-between; gap:10px; font-size:14px; font-weight:700; }
+.brand-left { display:flex; align-items:center; gap:10px; }
+.brand-mark { display:grid; place-items:center; width:30px; height:30px; background:var(--yellow); border-radius:8px; font-size:24px; }
+main { max-width:1040px; margin:0 auto; padding:0 20px 40px; }
+.panel { background:var(--paper); border:1px solid var(--line); border-radius:24px; padding:36px; box-shadow:0 8px 30px #292c3005; }
+.eyebrow { color:var(--orange); font-size:13px; letter-spacing:.13em; font-weight:800; margin:0 0 10px; }
+h1 { font-size:clamp(28px,5vw,40px); line-height:1.35; margin:0 0 20px; letter-spacing:-.03em; }
+h2 { font-size:22px; line-height:1.5; margin:0 0 20px; }
+p { margin:0 0 18px; }
+.intro { color:#50545a; }
+.small { font-size:14px; color:var(--muted); }
+.primary,.secondary { min-height:52px; border-radius:12px; padding:12px 22px; border:1px solid transparent; font-weight:700; }
+.primary { background:var(--yellow); color:var(--ink); }
+.primary:hover { background:#ffd96b; }
+.secondary { background:#fff; border-color:var(--line); color:var(--ink); }
+.wide { width:100%; }
+.text-button { background:none; border:0; color:var(--muted); text-decoration:underline; font-size:14px; }
+.notice { max-width:1000px; margin:0 auto 16px; padding:14px; background:#fff0cc; border:1px solid #bb7500; }
+/* PROJECT・チーム数ボタン */
+.project-choice { display:grid; gap:14px; margin:6px 0 10px; }
+@media(min-width:640px) { .project-choice { grid-template-columns:1fr 1fr; } }
+.project-button { min-height:88px; font-size:22px; font-weight:800; background:#fff; border:2px solid #e3e4df; border-radius:16px; }
+.project-button:hover { border-color:#b97a00; }
+/* すべての色スウォッチ共通：明るい色（白など）でも見失わないよう、専用クラスで強調します */
+.team-swatch, .turn-swatch, .dot, .result-swatch, .rank-swatch, .entrance-dot {
+  border-radius:50%; border:2px solid transparent; box-shadow:0 0 0 1px rgba(41,44,48,.15); flex-shrink:0;
+}
+.team-swatch--light, .turn-swatch--light, .dot--light, .result-swatch--light, .rank-swatch--light, .entrance-dot--light {
+  border-color:var(--ink); border-width:3px; box-shadow:0 1px 3px rgba(41,44,48,.4);
+}
+/* チームチップ・一覧 */
+.team-strip { display:grid; gap:12px; margin:6px 0 26px; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); }
+.team-card { display:flex; flex-direction:column; align-items:center; gap:8px; padding:16px 10px; border-radius:14px; border:2px solid var(--line); background:#fafaf7; text-align:center; }
+.team-swatch { width:34px; height:34px; }
+.team-name-input { width:100%; text-align:center; padding:8px; border:1px solid var(--line); border-radius:8px; font-weight:700; }
+.rank-grid { display:grid; gap:12px; margin-bottom:20px; }
+@media(min-width:640px) { .rank-grid { grid-template-columns:repeat(var(--team-count,5),1fr); } }
+.rank-field { display:flex; flex-direction:column; gap:6px; padding:14px; background:#f6f6f2; border-radius:12px; }
+.rank-field label { font-weight:800; font-size:14px; }
+.rank-select-row { display:flex; align-items:center; gap:8px; }
+.rank-select-row select { flex:1; padding:10px; border-radius:8px; border:1px solid var(--line); font-weight:700; }
+.rank-swatch { width:22px; height:22px; }
+.order-toggle { display:flex; gap:12px; margin-bottom:22px; }
+.order-toggle button { flex:1; min-height:56px; border-radius:12px; border:2px solid var(--line); background:#fff; font-weight:800; }
+.order-toggle button[aria-pressed="true"] { border-color:#b97a00; background:#fff7df; }
+.error { color:#b12222; min-height:26px; margin:4px 0 16px; font-weight:700; }
+/* 入口選択 */
+.turn-banner { display:flex; align-items:center; gap:12px; padding:16px 20px; border-radius:14px; margin-bottom:22px; font-weight:800; font-size:19px; }
+.turn-banner--light { background:#eef0ec; border:2px solid var(--ink); }
+.turn-swatch { width:24px; height:24px; }
+.pick-order-list { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:22px; }
+.pick-order-item { display:flex; align-items:center; gap:8px; padding:8px 14px; border-radius:999px; background:#f6f6f2; font-weight:700; font-size:14px; }
+.pick-order-item.is-done { opacity:.55; }
+.dot { width:12px; height:12px; }
+.entrance-grid { display:grid; grid-template-columns:repeat(var(--team-count,5),1fr); gap:10px; margin-bottom:10px; }
+.entrance-button { min-height:78px; border-radius:12px; border:2px solid #e3e4df; background:#fff; font-weight:800; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; }
+.entrance-button .entrance-num { font-size:13px; color:var(--muted); font-weight:700; }
+.entrance-button[data-taken="true"] { cursor:default; }
+.entrance-dot { width:14px; height:14px; }
+/* あみだくじ */
+.ladder-actions { display:flex; gap:12px; margin:20px 0 4px; flex-wrap:wrap; }
+.ladder-actions .primary, .ladder-actions .secondary { flex:1 1 200px; }
+.ladder-wrap { overflow-x:auto; padding:6px 0 4px; }
+.ladder-svg { display:block; margin:0 auto; width:100%; max-width:580px; height:auto; }
+.exit-number { font-weight:900; font-size:20px; fill:var(--orange); text-anchor:middle; }
+/* ルートの先端を示す目印。色が進んでいく過程を追いやすくします */
+.team-marker { stroke:#292c30; stroke-width:1.5; stroke-opacity:.25; }
+.team-marker--light { stroke-width:3; stroke-opacity:1; }
+.exit-label { font-weight:800; font-size:14px; fill:var(--ink); text-anchor:middle; }
+/* 結果画面（プロジェクター用） */
+.result-list { display:grid; gap:14px; margin:10px 0 24px; }
+.result-row { display:flex; align-items:center; gap:20px; padding:18px 24px; border-radius:16px; background:#f6f6f2; border:2px solid var(--line); }
+.result-rank { font-size:40px; font-weight:900; width:64px; text-align:center; flex-shrink:0; }
+.result-team { display:flex; align-items:center; gap:14px; font-size:28px; font-weight:800; }
+.result-swatch { width:30px; height:30px; }
+.result-note { text-align:center; font-size:15px; color:var(--muted); margin-top:4px; }
+footer { text-align:center; padding:26px 16px; color:var(--muted); font-size:12px; }
+dialog { width:min(90%,480px); border:1px solid var(--line); border-radius:20px; padding:28px; color:var(--ink); }
+dialog::backdrop { background:#1d232b88; }
+.dialog-actions { display:grid; gap:12px; }
+@media(max-width:640px) {
+  .brand { padding:14px 16px; font-size:12px; }
+  main { padding:0 12px 30px; }
+  .panel { padding:22px 18px; border-radius:18px; }
+  h2 { font-size:19px; }
+  .entrance-grid { gap:6px; }
+  .entrance-button { min-height:64px; font-size:14px; }
+  .result-rank { font-size:30px; width:48px; }
+  .result-team { font-size:20px; }
+  .turn-banner { font-size:16px; padding:14px 16px; }
+}

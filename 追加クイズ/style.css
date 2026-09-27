@@ -1,0 +1,65 @@
+:root { color-scheme: light; --ink:#292c30; --muted:#686b70; --yellow:#ffcc45; --orange:#b64812; --line:#dedfdc; --paper:#fff; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); background:#f5f5f0; font-family: -apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif; font-size:17px; line-height:1.75; }
+button { font:inherit; cursor:pointer; touch-action:manipulation; }
+button:focus-visible, summary:focus-visible { outline:3px solid #1968ac; outline-offset:4px; }
+button:disabled { opacity:.4; cursor:default; }
+[hidden] { display:none !important; }
+.brand { max-width:860px; margin:auto; padding:24px 22px; display:flex; align-items:center; gap:10px; font-size:14px; font-weight:700; }
+.brand-mark { display:grid; place-items:center; width:30px; height:30px; background:var(--yellow); border-radius:8px; font-size:24px; }
+main { max-width:820px; margin:0 auto; padding:0 20px; }
+.panel { background:var(--paper); border:1px solid var(--line); border-radius:24px; padding:40px; box-shadow:0 8px 30px #292c3005; }
+.eyebrow { color:var(--orange); font-size:13px; letter-spacing:.13em; font-weight:800; margin:0 0 10px; }
+h1 { font-size:clamp(30px,6vw,44px); line-height:1.4; margin:0 0 24px; letter-spacing:-.03em; }
+h2 { font-size:23px; line-height:1.65; margin:0 0 24px; }
+p { margin:0 0 20px; }
+/* かんたん（黄）とチャレンジ（オレンジ）の2択があることを、帯を半分に割って先取りで示す */
+.hero-art { height:16px; margin:10px 0 26px; border-radius:8px; background:linear-gradient(90deg, var(--yellow) 0 50%, var(--orange) 50% 100%); }
+.intro { color:#50545a; }
+.small { font-size:14px; color:var(--muted); }
+.primary,.secondary { min-height:56px; border-radius:12px; padding:13px 22px; border:1px solid transparent; font-weight:700; }
+.primary { background:var(--yellow); color:var(--ink); }
+.primary:hover { background:#ffd96b; }
+.secondary { background:#fff; border-color:var(--line); color:var(--ink); }
+.wide { width:100%; }
+.mode-choice { display:grid; gap:14px; margin:6px 0 24px; }
+.mode-button { display:flex; flex-direction:column; align-items:flex-start; gap:6px; width:100%; padding:20px 22px; background:#fff; border:2px solid #e3e4df; border-radius:14px; text-align:left; }
+.mode-button.challenge { border-color:#e0ad3f; background:#fff7df; }
+.mode-title { font-size:18px; font-weight:800; }
+.mode-desc { font-size:13px; color:var(--muted); font-weight:500; line-height:1.6; }
+.status { position:sticky; top:0; z-index:2; background:#f5f5f0f5; padding:12px 0 16px; backdrop-filter:blur(8px); }
+.status-row { display:flex; justify-content:space-between; align-items:center; gap:10px; }
+.count { font-size:18px; font-weight:800; }
+.timer { font-weight:800; padding:5px 14px; border-radius:10px; background:#fff; border:1px solid var(--line); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.timer span { font-size:14px; margin-right:8px; }
+.timer strong { font-size:30px; }
+.timer.warning { background:#fff0cb; border:2px solid #b85a00; color:#8c4200; }
+.timer.critical { background:#a91f1f; border:2px solid #a91f1f; color:#fff; box-shadow:0 0 0 4px #a91f1f22; }
+.team-hint { display:inline-block; margin:0 0 18px; padding:6px 12px; background:#fff0cb; border:1px solid #e0ad3f; border-radius:999px; font-size:13px; font-weight:700; color:#8c4200; }
+.options { display:grid; gap:12px; }
+.option { display:flex; align-items:center; gap:14px; width:100%; padding:16px; background:#fff; color:var(--ink); border:2px solid #e3e4df; border-radius:12px; text-align:left; line-height:1.6; min-height:68px; }
+.letter { flex-shrink:0; display:grid; place-items:center; width:34px; height:34px; background:#f2f3ef; border-radius:8px; font-weight:700; }
+.option[aria-pressed="true"] { border-color:#b97a00; background:#fff7df; }
+.option[aria-pressed="true"] .letter { background:var(--yellow); }
+.selected-mark { margin-left:auto; font-weight:800; color:#885800; }
+.error { color:#b12222; min-height:30px; margin:14px 0 0; font-weight:700; }
+.result { text-align:center; }
+.result-headline { font-size:38px; font-weight:900; margin:0 0 8px; }
+.result-headline.success { color:#1e7a34; }
+.result-headline.fail { color:#a91f1f; }
+.result-sub { font-size:20px; font-weight:800; margin:0 0 24px; }
+.timeout { color:#b12222; font-weight:900; font-size:48px; line-height:1.2; margin:4px 0 18px; }
+.answer-box { text-align:left; background:#fafaf7; border:1px solid var(--line); border-radius:14px; padding:20px 22px; margin-bottom:24px; }
+.answer-box p { margin:0 0 10px; }
+.answer-box p:last-child { margin-bottom:0; }
+.answer-correct { font-weight:800; }
+.answer-note { color:var(--muted); font-size:15px; }
+footer { text-align:center; padding:26px 16px; color:var(--muted); font-size:12px; }
+#admin { text-align:center; margin-bottom:24px; }
+.text-button { background:none; border:0; color:var(--muted); text-decoration:underline; font-size:14px; }
+.notice { max-width:780px; margin:0 auto 16px; padding:14px; background:#fff0cc; border:1px solid #bb7500; }
+dialog { width:min(90%,480px); border:1px solid var(--line); border-radius:20px; padding:28px; color:var(--ink); }
+dialog::backdrop { background:#1d232b88; }
+.dialog-actions { display:grid; gap:12px; }
+@media(min-width:700px) { .options { grid-template-columns:1fr 1fr; } }
+@media(max-width:520px) { .brand { padding:16px; font-size:12px; } main { padding:0 14px; } .panel { padding:25px 20px; border-radius:18px; } h2 { font-size:20px; } .timer { padding:4px 10px; } .timer strong { font-size:27px; } .timer span { font-size:12px; } .count { font-size:16px; } .option { padding:13px 12px; gap:10px; } .result-headline { font-size:30px; } .result-sub { font-size:17px; } .answer-box { padding:16px 16px; } }

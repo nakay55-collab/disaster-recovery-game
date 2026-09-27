@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffcc45">
+  <title>追加クイズ | 災害復旧・まちづくりゲーム</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="brand"><span class="brand-mark" aria-hidden="true">＋</span> 災害復旧・まちづくりゲーム</header>
+  <p id="storage-warning" class="notice" role="alert" hidden>このブラウザでは回答を保存できません。回答中はページを閉じたり再読み込みしたりしないでください。</p>
+  <main id="app"></main>
+  <footer>すきま時間に、もう一問チャレンジしよう。</footer>
+  <div id="admin" hidden><button id="reset" class="text-button" type="button">管理者用：リセット</button></div>
+  <dialog id="finish-dialog" aria-labelledby="confirm-title">
+    <h2 id="confirm-title">この回答で確定しますか？</h2>
+    <p>確定すると回答を変更できません。</p>
+    <div class="dialog-actions"><button id="cancel-finish" class="secondary" type="button">選び直す</button><button id="confirm-finish" class="primary" type="button">回答を確定する</button></div>
+  </dialog>
+  <noscript>このクイズにはJavaScriptが必要です。ブラウザの設定でJavaScriptを有効にしてください。</noscript>
+</body>
+</html>
